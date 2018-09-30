@@ -1,0 +1,73 @@
+/* 通用样式 */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+form {
+    margin: 0;
+}
+
+ul,
+ol {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+
+/* input标签 去掉默认样式 */
+
+input {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+img {
+    max-width: 100%;
+    margin: 0;
+}
+
+
+/* a标签的下划线 */
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN Normal", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+}
+
+#app {
+    height: 100%;
+}
+
+
+/* body{
+	max-width: 640px;
+	min-width: 240px;
+	margin: 0 auto !important;
+}
+.border-bottom-1px{
+	border-bottom: 1px solid #e0e0e0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (min-device-pixel-ratio:2) {
+	.border-bottom-1px{
+		border: none;
+		background-image: -webkit-linear-gradient(90deg,#e0e0e0,#e0e0e0 50%,transparent 50%);
+		background-image: -moz-linear-gradient(90deg,#e0e0e0,#e0e0e0 50%,transparent 50%);
+		background-image: -o-linear-gradient(90deg,#e0e0e0,#e0e0e0 50%,transparent 50%);
+		background-image: linear-gradient(0,#e0e0e0,#e0e0e0 50%,transparent 50%);
+		background-size: 100% 1px;
+		background-repeat: no-repeat;
+		background-position: bottom
+	}
+} */

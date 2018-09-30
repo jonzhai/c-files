@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-flow: column wrap;
+
+        }
+        .item{
+            flex-shrink: 0;
+            width: 25%;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" style="height: 100px;" onclick="ts()"></div>
+        <div class="item" style="height: 200px;"></div>
+        <div class="item" style="height: 300px;"></div>
+        <div class="item" style="height: 100px;"></div>
+        <div class="item" style="height: 200px;"></div>
+        <div class="item" style="height: 400px;"></div>
+        <div class="item" style="height: 100px;"></div>
+        <div class="item" style="height: 200px;"></div>
+        <div class="item" style="height: 300px;"></div>
+
+    </div>
+    <script>
+
+        function ts(){
+            alert(1)
+        }
+        let status = {
+            "success": 0,
+            "failed": 1,
+            "pending": 3
+        }
+        class Promise {
+            constructor(resolve, reject){
+                resolve = this.resolve;
+                reject = this.reject;
+                this.state = status.pending;
+                this.data = '';
+            }
+            resolve(data){
+                if(this.state === status.pending){
+                    this.state = status.success;
+                    this.data = data;
+                    this.then();
+                }
+            }
+            reject(err){
+                if(this.state === status.pending){
+                    this.state = status.failed;
+                    this.data = err;
+                    this.catch();
+                }
+            }
+            then(callback){
+                callback(this.data);
+                return new Promise;
+            }
+            catch(callback){
+                callback(this.data)
+            }
+
+        }
+
+
+        new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+                resolve(123) 
+            }, 2000);
+
+        }).then((data) => {
+            console.log(data)
+        }).catch((err) => {
+            console.log(err)
+        })
+    
+    
+    
+    
+    </script>
+
+
+</body>
+
+</html>

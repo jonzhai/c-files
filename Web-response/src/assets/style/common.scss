@@ -1,0 +1,28 @@
+$fixedWidth: 1100px;
+$FZ: 16px;
+@import '../icon-font/iconfont.css';
+// @media screen and (min-width:960px){
+//     $FZ: 16px;
+// }
+@media screen and (max-width:960px){
+    $FZ: 12px;
+}
+@function px2rem( $px) {
+    @return ($px/$FZ) * 1rem; //对应js 
+}
+
+@mixin font-dpr($font-size) {
+    font-size: $font-size*0.5;
+    [data-dpr="2"] & {
+        font-size: $font-size;
+    }
+    [data-dpr="3"] & {
+        font-size: $font-size *1.5;
+    }
+}
+@mixin scale-animation(){
+    transition: all 0.5s;
+    &:hover{
+        transform: scale(1.2);
+    }
+}

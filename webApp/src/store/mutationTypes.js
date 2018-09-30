@@ -1,0 +1,15 @@
+export const SET_CURCOUNT = 'SET_CURCOUNT';
+
+export const SET_PREVROUTER = 'SET_PREVROUTER';
+
+export const SET_TOKEN = 'SET_TOKEN';
+
+export const SET_CURORDER = 'SET_CURORDER';
+
+export const SET_CURCARSLIST = 'SET_CURCARSLIST';
+
+export const SET_TRANSITIONPASS = 'SET_TRANSITIONPASS';
+
+export const SET_CURTIME = 'SET_CURTIME';
+export const SET_CURCITY = 'SET_CURCITY';
+export const SET_CURSALECITY = 'SET_CURSALECITY';
